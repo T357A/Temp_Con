@@ -7,9 +7,9 @@ def k_calc():
     kel_cel = round((temp - 273.15),)
     kel_fah = round((((temp - 273.15) * 1.8) + 32), 2)
     kel_ran = round((temp * 1.8), 2)
-    print(kel_cel, ' ˚C')
-    print(kel_fah, ' ˚F')
-    print(kel_ran, ' ˚R')
+    print(kel_cel, '˚C')
+    print(kel_fah, '˚F')
+    print(kel_ran, '˚R')
 
 # From Rankine input
 def r_calc():
@@ -17,9 +17,9 @@ def r_calc():
     ran_fah = round((temp - 459.67), 2)
     ran_cel = round(((temp - 491.67)*1.8), 2)
     ran_kel = round((temp * 1.8), 2)
-    print(ran_fah, ' ˚F')
-    print(ran_cel, ' ˚C')
-    print(ran_kel, ' ˚K')
+    print(ran_fah, '˚F')
+    print(ran_cel, '˚C')
+    print(ran_kel, '˚K')
 
 # From Fahrenheit input
 def f_calc():
@@ -27,9 +27,9 @@ def f_calc():
     fah_cel = round(((temp - 32) / 1.8), 2)
     fah_ran = round((temp + 459.67), 2)
     fah_kel = round((((temp - 32) / 1.8) + 273.15), 2)
-    print(fah_ran, ' ˚R')
-    print(fah_cel, ' ˚C')
-    print(fah_kel, ' ˚K')
+    print(fah_ran, '˚R')
+    print(fah_cel, '˚C')
+    print(fah_kel, '˚K')
 
 # From Celsius input
 def c_calc():
@@ -37,9 +37,9 @@ def c_calc():
     cel_fah = round(((temp * 1.8) + 32), 2)
     cel_kel = round((temp + 273.15), 2)
     cel_ran = round(((temp * 1.8) + 491.67), 2)
-    print(cel_kel, ' ˚K')
-    print(cel_fah, ' ˚F')
-    print(cel_ran, ' ˚R')
+    print(cel_kel, '˚K')
+    print(cel_fah, '˚F')
+    print(cel_ran, '˚R')
 
 # Deciding what output the user is seeking to calculate remaining values
 
