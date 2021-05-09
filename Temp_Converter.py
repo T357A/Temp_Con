@@ -1,6 +1,7 @@
 #  Code explainds the comments to the computer, not to other programmers - Andy Harris ;)
 # What are you trying to help the user with?
 #  Output for users requirement:
+# From Kelvin input
 def k_calc():
     print(temp, scale, ('˚ is: '))
     kel_cel = round((temp - 273.15),)
@@ -10,7 +11,7 @@ def k_calc():
     print(kel_fah, ' ˚F')
     print(kel_ran, ' ˚R')
 
-
+# From Rankine input
 def r_calc():
     print(temp, scale, ('˚ is: '))
     ran_fah = round((temp - 459.67), 2)
@@ -20,7 +21,7 @@ def r_calc():
     print(ran_cel, ' ˚C')
     print(ran_kel, ' ˚K')
 
-
+# From Fahrenheit input
 def f_calc():
     print(temp, scale, ('˚ is: '))
     fah_cel = round(((temp - 32) / 1.8), 2)
@@ -30,7 +31,7 @@ def f_calc():
     print(fah_cel, ' ˚C')
     print(fah_kel, ' ˚K')
 
-
+# From Celsius input
 def c_calc():
     print(temp, scale, ('˚ is: '))
     cel_fah = round(((temp * 1.8) + 32), 2)
