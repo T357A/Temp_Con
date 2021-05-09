@@ -1,64 +1,67 @@
-
+#  Code explainds the comments to the computer, not to other programmers - Andy Harris ;)
+# What are you trying to help the user with?
+#  Output for users requirement:
 def k_calc():
-    print(temp, temp_calc, ('˚ is: '))
-    kel_cel = temp - 273.15
-    kel_fah = ((temp - 273.15) * 1.8) + 32
-    kel_ran = temp * 1.8
+    print(temp, scale, ('˚ is: '))
+    kel_cel = round((temp - 273.15),)
+    kel_fah = round((((temp - 273.15) * 1.8) + 32), 2)
+    kel_ran = round((temp * 1.8), 2)
     print(kel_cel, ' ˚C')
     print(kel_fah, ' ˚F')
     print(kel_ran, ' ˚R')
 
 
 def r_calc():
-    print(temp, temp_calc, ('˚ is: '))
-    ran_fah = temp - 459.67
-    ran_cel = (temp - 491.67)*1.8
-    ran_kel = temp * 1.8
+    print(temp, scale, ('˚ is: '))
+    ran_fah = round((temp - 459.67), 2)
+    ran_cel = round(((temp - 491.67)*1.8), 2)
+    ran_kel = round((temp * 1.8), 2)
     print(ran_fah, ' ˚F')
     print(ran_cel, ' ˚C')
     print(ran_kel, ' ˚K')
 
 
 def f_calc():
-    print(temp, temp_calc, ('˚ is: '))
-    fah_cel = (temp - 32) * 1.8
-    fah_ran = temp + 459.76
-    fah_kel = ((temp - 32) * 1.8) + 273.15
+    print(temp, scale, ('˚ is: '))
+    fah_cel = round(((temp - 32) / 1.8), 2)
+    fah_ran = round((temp + 459.67), 2)
+    fah_kel = round((((temp - 32) / 1.8) + 273.15), 2)
     print(fah_ran, ' ˚R')
     print(fah_cel, ' ˚C')
     print(fah_kel, ' ˚K')
 
 
 def c_calc():
-    print(temp, temp_calc, ('˚ is: '))
-    cel_fah = (temp * 1.8) + 32
-    cel_kel = temp + 273.15
-    cel_ran = (temp * 1.8) + 491.67
+    print(temp, scale, ('˚ is: '))
+    cel_fah = round(((temp * 1.8) + 32), 2)
+    cel_kel = round((temp + 273.15), 2)
+    cel_ran = round(((temp * 1.8) + 491.67), 2)
     print(cel_kel, ' ˚K')
     print(cel_fah, ' ˚F')
     print(cel_ran, ' ˚R')
 
-# Deciding what function to use to calculate remaining values
+# Deciding what output the user is seeking to calculate remaining values
+
+
 def temp_calc():
     global scale
     scale = input(str(
         "What temprature scale did you want to convert from? F= Fahrenheit, C=Celsius, R= Rankine, K:+ Kelvin: "))
     scale = scale.upper()
-    while True:
-        try:
-            if scale is 'K':
-                k_calc()
-            if scale is 'R':
-                r_calc()
-            if scale is 'F':
-                f_calc()
-            if scale is 'C':
-                c_calc()
-        except:
-            print('Please select a proper temperature scale: ')
-            continue
+    if scale == 'K':
+        k_calc()
+    elif scale == 'R':
+        r_calc()
+    elif scale == 'F':
+        f_calc()
+    elif scale == 'C':
+        c_calc()
+    else:
+        print('Please select a proper temperature scale: ')
+        temp_calc()
 
-# User input to star program
+
+# Question to user input to start program
 while True:
     try:
         temp = float(
@@ -67,3 +70,4 @@ while True:
     except ValueError:
         print('Please check your input: ')
         continue
+# Future- GUI with buttons
