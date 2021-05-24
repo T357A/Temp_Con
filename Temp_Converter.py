@@ -47,7 +47,7 @@ def c_calc():
 def temp_calc():
     global scale
     scale = input(str(
-        "What temprature scale did you want to convert from? F= Fahrenheit, C=Celsius, R= Rankine, K:+ Kelvin: "))
+        "What temprature scale did you want to convert from? F= Fahrenheit, C=Celsius, R= Rankine, K: Kelvin: "))
     scale = scale.upper()
     if scale == 'K':
         k_calc()
@@ -57,6 +57,9 @@ def temp_calc():
         f_calc()
     elif scale == 'C':
         c_calc()
+    elif scale == 'Q':
+        print('Calculations complete, good bye.')
+        exit()
     else:
         print('Please select a proper temperature scale: ')
         temp_calc()
